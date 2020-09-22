@@ -17,7 +17,7 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 <br>
 // Open XAMPP and run SQL Server
 <br>
-// at SQL Admin page create new Database by name is: firstproject
+// at SQL Admin page create new Database by name is: NONDATABASE
 <br>
 // Run Visual Studio Code and open this my Folder
 <br>
@@ -25,7 +25,7 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 <br>
 <img src="https://i.ibb.co/QfxVPGT/Screen-Shot-2020-09-17-at-2-27-44.png" alt="">
 <br>
-// Open this file, change db name by DB_DATABASE=firstproject DB_USERNAME=root DB_PASSWORD=
+// Open this file, change db name by<br> DB_DATABASE=NONDATABASE<br> DB_USERNAME=root<br> DB_PASSWORD=
 <br>
 // At the visual code Open terminal and run: composer update and still wait to finish
 <br>
