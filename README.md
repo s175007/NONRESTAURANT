@@ -51,7 +51,7 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 <br>
 // and have toggle button for change to dark mode.
 <br>
-// try <br>create delete edit</br> food , foodtype, drink, drinktype.
+// try <b>create delete edit</b> food , foodtype, drink, drinktype.
 <br>
 // don't forget check your changed infomation at front end.
 <br>
