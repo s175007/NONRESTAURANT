@@ -27,13 +27,13 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 <br>
 // Open this file, change db name by<br> DB_DATABASE=nondatabase<br> DB_USERNAME=root<br> DB_PASSWORD=
 <br>
-// At the visual code Open terminal and run: composer update<br> and still wait to finish
+// At the visual code Open terminal and run: <b>composer update</b><br> and still wait to finish
 <br>
-// run: php artisan key:generate
+// run: <b>php artisan key:generate</b>
 <br>
-// run: php artisan migrate
+// run: <b>php artisan migrate</b>
 <br>
-// run: php artisan storage:link
+// run: <b>php artisan storage:link</b>
 <br>
 // go to this link and download images.zip file: https://drive.google.com/drive/folders/1ceaSOUF83w6D2lexYrGmjMWuZ4Kv_b_K?usp=sharing
 <br>
