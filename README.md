@@ -19,6 +19,8 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 <br>
 // at SQL Admin page create new Database by name is: nondatabase
 <br>
+<img src="https://i.ibb.co/GxkSq6b/database.png" alt="">
+<br>
 // Run Visual Studio Code and open this my Folder
 <br>
 // duplicate file env.example -> rename is: .env
