@@ -35,25 +35,25 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 <br>
 // run: <b>php artisan storage:link</b>
 <br>
-// go to this link and download images.zip file: https://drive.google.com/drive/folders/1ceaSOUF83w6D2lexYrGmjMWuZ4Kv_b_K?usp=sharing
+// go to this link and <b>download</b> images.zip file: https://drive.google.com/drive/folders/1ceaSOUF83w6D2lexYrGmjMWuZ4Kv_b_K?usp=sharing
 <br>
 // extract file and copy paste this folder by path: ../NONMENU-master/storage/app/public/ <--
 <br>
 <img src="https://i.ibb.co/3sgrTzg/Screen-Shot-2020-09-17-at-2-25-29.png" alt="">
 <br>
-// run: php artisan db:seed
+// run: <b>php artisan db:seed</b>
 <br>
-// run: php artisan serve
+// run: <b>php artisan serve</b>
 <br>
 // goto localhost:8000/
 <br>
-// goto Quanli page and try login by account: Admin   pass: 123456
+// in the navigation have VN and JP button is you can change nav language
 <br>
-// click Danhsachmon button
+// and have toggle button for change to dark mode.
 <br>
-// and try create delete edit food iteam
+// try <br>create delete edit</br> food , foodtype, drink, drinktype.
 <br>
-// edit after at Menu Page check your changed infomation
+// don't forget check your changed infomation at front end.
 <br>
 // This website have responsive, try it!
 <br>
