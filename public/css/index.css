@@ -14,6 +14,11 @@ html {
     --dark-color-light: #606060;
     --gray-color: #f0f1f3;
     --bg-color: #FAFAFF;
+    --yellow-color: #FFCE54;
+    --yellow-color-alt: #FCBB42;
+    --mint-color: #48CFAD;
+    --mint-color-alt: #37BC9B;
+
 }
 
 html[data-theme='dark'] {
@@ -380,6 +385,14 @@ img {
     row-gap: 2rem;
 }
 
+.table__title{
+    text-transform: uppercase;
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi);
+    text-align: center;
+    margin: 50px 50px;
+}
+
 .new__box{
     position: relative;
     display: flex;
@@ -387,6 +400,48 @@ img {
     background-color: var(--gray-color);
     overflow: hidden;
 }
+
+.table__box{
+    height: 150px;
+    text-align: center;
+    position: relative;
+    display: block;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.table__box__available {
+    background-color: var(--mint-color);
+}
+.table__box__using {
+    background-color: var(--first-color);
+}
+.table__box__pending {
+    background-color: var(--yellow-color);
+}
+
+.box__button{
+    border: none;
+    width: 20px;
+    height: 20px;
+}
+
+.table__button{
+    display: flex;
+    justify-content: center;
+}
+
+.button__available{
+    background-color: var(--mint-color-alt);
+}
+.button__using{
+    background-color: var(--first-color-alt);
+}
+.button__pending{
+    background-color: var(--yellow-color-alt);
+}
+
 
 .new__content{
     text-align: center;
@@ -409,6 +464,41 @@ img {
     transition: .3s;
 }
 
+.login__button{
+    background:transparent;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 18px;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    outline:none;
+    position:relative;
+    top:0;
+    text-shadow:0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -ms-transition: all 0.2s ease-in-out 0s;
+     transition: all 0.2s ease-in-out 0s;
+}
+
+.redbtn{
+    background:#e55947;
+    color:#fff;
+    box-shadow: 0 3px 0 #d2321e;
+}
+.redbtn:hover{
+    background:#d2321e;
+}
+.redbtn:active, .redbtn:focus{
+    background:#d2321e;
+}
+
 .newsletter{
     text-align: center;
 }
@@ -422,6 +512,10 @@ img {
 .newsletter__form{
     display: grid;
     grid-template-columns: 1fr .5fr;
+}
+
+.login__form{
+    display: block;
 }
 
 .newsletter__input{
@@ -498,10 +592,6 @@ img {
 /* MEADIA QUERIES */
 
 @media screen and (min-width:768px){
-    .nav {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
     body{
         margin:0;
     }

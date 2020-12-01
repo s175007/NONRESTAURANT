@@ -1,42 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Table</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="{{ asset('css/fontawesome-free-5.14.0-web/css/all.css') }}" rel="stylesheet">
-    <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
-    <style>
-        .fa-edit {
-            margin-right: 20px;
-        }
-
-        img {
-            vertical-align: middle;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-
-        .admin__button{
-            text-align: center;
-        }
-
-        .admin__button a{
-            display: inline-block;
-            margin-left: 10%;
-            margin-right: 10%;
-        }
-
-    </style>
-</head>
+@section('content')
 
 <body>
     <div style="margin : 50px">
@@ -80,15 +44,13 @@
                                         <form method="POST" action="{{ route('admin.foodtypes.destroy', ['foodtype' => $foodtype]) }}">
                                             @csrf
                                             @method('delete')
-                                            <button type="submit">
-                                                <i class="fas fa-user-times"></i>
+                                            <button type="submit" title="delete" style="border: none; background-color:transparent;">
+                                                <i class="fas fa-trash fa-lg" style="color: #A9A9A9"></i>
                                             </button>
+                                            <a href="{{ route('admin.foodtypes.edit', ['id' => $foodtype->id]) }}">
+                                                <i class="far fa-edit fa-lg" style="color: #A9A9A9"></i>
+                                            </a>
                                         </form>
-                                    </div>
-                                    <div class="col-sm">
-                                        <a href="{{ route('admin.foodtypes.edit', ['id' => $foodtype->id]) }}">
-                                            <i class="far fa-edit"></i>
-                                        </a>
                                     </div>
                                 </div>
                             </td>
@@ -102,4 +64,4 @@
     </div>
 </body>
 
-</html>
+@endsection

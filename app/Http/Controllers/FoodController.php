@@ -51,7 +51,7 @@ class FoodController extends Controller
         $path = Storage::disk('public')->put('images', $request->file('image'));
 
         $food = new Food();
-        $food->foodtype = $request->foodtype;
+        $food->foodtype = $request->food_types;
         $food->foodnamevn = $request->foodnamevn;
         $food->foodnamejp = $request->foodnamejp;
         $food->price = $request->price;
@@ -62,6 +62,7 @@ class FoodController extends Controller
         }
         // $food->status = $request->has('status');
         $food->image = $path;
+        // return $food;
         $food->save();
         if(!empty($food)){
             return Redirect::route('admin.foods.index')->with(['message'=> 'Tạo thành công']);

@@ -42,6 +42,6 @@ class Food extends Model
 
     public function foodTypes()
     {
-        return $this->belongsTo('App\Models\FoodType','foodtype');
+        return $this->belongsTo('App\Models\FoodType', 'foodtype');
     }
 }

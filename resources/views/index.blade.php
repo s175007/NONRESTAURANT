@@ -28,6 +28,7 @@
                     <li class="nav__item"><a key="home" href="{{ route('index') }}" class="nav__link active tr">Trang chủ</a></li>
                     <li class="nav__item"><a key="food" href="{{ route('menu') }}" class="nav__link tr">Xem menu</a></li>
                     <li class="nav__item"><a key="drink" href="{{ route('drink') }}" class="nav__link tr">Nước uống</a></li>
+                    <li class="nav__item"><a key="table" href="{{ route('table') }}" class="nav__link tr">Bàn</a></li>
                     <li class="nav__item"><a key="contacts" href="{{ route('contacts') }}" class="nav__link tr">Địa chỉ</a></li>
                     <li class="nav__item"><a key="follow" href="#suscribed" class="nav__link tr">Theo dõi</a></li>
                     <li class="nav__item"><a key="admin" href="{{ route('admins.login') }}" class="nav__link tr">Quản lí</a></li>
@@ -140,6 +141,7 @@
                         <span class="featured__price">780円</span>
                     </div>
                 </div>
+
             </div>
         </section>
 

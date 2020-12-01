@@ -1,7 +1,26 @@
-@extends('layouts.app')
+@extends('layouts.header')
 
 @section('content')
-    <div class="container">
+    <section class="newsletter section" id="suscribed">
+        <div class="newsletter__container bd-grid">
+            <div class="newslettet__suscribe">
+                <form method="POST" action="{{ route('admins.login') }}" class="login__form">
+                    @csrf
+                        <div class="form-group row">
+                            <h2 class="section-title">Tài khoản</h2>
+                            <input type="text" class="newsletter__input" placeholder="Tên đăng nhập"name="username" value="{{ old('username') }}">
+                            <h2 class="section-title">Mật khẩu</h2>
+                            <input type="password" class="newsletter__input" placeholder="Mật khẩu"name="password" value="{{ old('password') }}">
+                        </div>
+                        <button type="submit" class="login__button">
+                            <a class="login__button redbtn" href="#">Đăng nhập</a>
+                        </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    {{-- <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
@@ -80,5 +99,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection

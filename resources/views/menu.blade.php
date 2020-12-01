@@ -9,7 +9,7 @@
     <section class=" slider">
             <ul id="food-{{ $loop->index }}" class="cs-hidden">
                 @forelse ($food_type->foods as $food)
-                @if ($food->status)
+
 
                     <li class="item-a">
                         <!--box-slider--------------->
@@ -24,6 +24,7 @@
                                 </div> --}}
                             </div>
                             <!--detail-box--------->
+                            @if ($food->status)
                             <div class="detail-box">
                                 <!--type-------->
                                 <div class="type">
@@ -34,10 +35,18 @@
                                 <a href="#" class="price">{{ $food->price }}円</a>
 
                             </div>
-
+                            @else
+                            <div class="detail-box">
+                                <div class="type">
+                                    <a href="#">{{ $food->foodnamevn }}</a>
+                                    <span>{{ $food->foodnamejp }}</span>
+                                </div>
+                                <!--price-------->
+                                <a style="color: #d2321e">Hết</a>
+                            </div>
+                            @endif
                         </div>
                     </li>
-                @endif
                 @empty
                     <p>.</p>
     @endforelse

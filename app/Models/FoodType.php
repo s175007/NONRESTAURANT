@@ -25,4 +25,13 @@ class FoodType extends Model
     {
         return $this->hasMany('App\Models\Food','foodtype');
     }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($foodtypes) {
+            $foodtypes->foods()->delete();
+        });
+    }
 }

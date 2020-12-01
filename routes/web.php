@@ -6,6 +6,7 @@ use App\Models\Drink;
 use App\Models\DrinkType;
 use App\Models\User;
 use App\Models\Post;
+use App\Models\Table;
 use Dotenv\Regex\Success;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -34,11 +35,10 @@ Route::resource('admin/foods','FoodController', ['names' => 'admin.foods'] )->mi
 
 Route::resource('admin/foodtypes','FoodTypeController', ['names' => 'admin.foodtypes'] )->middleware('admin');
 
-Route::resource('admin/users','UserController', ['names' => 'admin.users'] )->middleware('admin');
+Route::resource('admin/tables','TableController', ['names' => 'admin.tables'] )->middleware('admin');
 
-Route::resource('admin/users','UserController', ['names' => 'admin.users'] )->middleware('admin');
+Route::post('admin/tables/{id}/edit-status/{status}','TableController@editStatus')->name('admin.tables.edstatus')->middleware('admin');
 
-Route::resource('admin/posts','PostController', ['names' => 'admin.posts'] )->middleware('admin');
 
 
 Auth::routes();
@@ -76,11 +76,19 @@ Route::get('/contacts', function () {
     return view('contacts');
 })->name('contacts');
 
+
+
 Route::get('/drink', function () {
     $drink_types = DrinkType::with('drinks')->get();
     // return $drink_types;
     return view('drink')->with('drink_types', $drink_types);
 })->name('drink');
+
+Route::get('/table', function () {
+    $tables = Table::all();
+
+    return view('table')->with('tables', $tables);
+})->name('table');
 
 // Route::get('/hello', function () {
 //     return "<p>Hello world</p>";
